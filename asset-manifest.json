@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/web-thanh-toan/static/css/main.c3ba1829.css",
+    "main.js": "/web-thanh-toan/static/js/main.ff6b0ce0.js",
+    "index.html": "/web-thanh-toan/index.html",
+    "main.c3ba1829.css.map": "/web-thanh-toan/static/css/main.c3ba1829.css.map",
+    "main.ff6b0ce0.js.map": "/web-thanh-toan/static/js/main.ff6b0ce0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3ba1829.css",
+    "static/js/main.ff6b0ce0.js"
+  ]
+}
