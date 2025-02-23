@@ -1,41 +1,33 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Dashboard from "./pages/Dashboard";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Home from "./pages/Home";
 import "./styles/index.css";
 
-function App() {
+export default function App() {
     return ( <
         Router >
         <
-        div className = "container" >
+        div className = "app-container" >
         <
-        nav >
+        nav className = "navbar" >
         <
-        Link to = "/" > Home < /Link> <
-        Link to = "/login" > Login < /Link> <
-        Link to = "/register" > Register < /Link> <
-        Link to = "/dashboard" > Dashboard < /Link> <
+        div className = "logo" > 燕云十六声 < /div> <
+        div className = "nav-links" >
+        <
+        Link to = "/" > 首页 < /Link> <
+        Link to = "/news" > 新闻 < /Link> <
+        Link to = "/download" > 下载 < /Link> <
+        Link to = "/community" > 社区 < /Link> <
+        Link to = "/support" > 客服 < /Link> <
+        /div> <
         /nav> <
         Routes >
         <
         Route path = "/"
-        element = { < h1 > Welcome to Web Thanh Toán < /h1>} / >
-            <
-            Route path = "/login"
-            element = { < Login / > }
-            /> <
-            Route path = "/register"
-            element = { < Register / > }
-            /> <
-            Route path = "/dashboard"
-            element = { < Dashboard / > }
-            /> <
-            /Routes> <
-            /div> <
-            /Router>
-        );
-    }
-
-    export default App;
+        element = { < Home / > }
+        /> <
+        /Routes> <
+        /div> <
+        /Router>
+    );
+}
