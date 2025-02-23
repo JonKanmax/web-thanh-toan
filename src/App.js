@@ -1,13 +1,41 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
+import "./styles/index.css";
 
 function App() {
     return ( <
-        div >
+        Router >
         <
-        h1 > Web Thanh Toán - Đang triển khai! < /h1> <
-        p > Chào mừng bạn đến với trang web thử nghiệm! < /p> <
-        /div>
-    );
-}
+        div className = "container" >
+        <
+        nav >
+        <
+        Link to = "/" > Home < /Link> <
+        Link to = "/login" > Login < /Link> <
+        Link to = "/register" > Register < /Link> <
+        Link to = "/dashboard" > Dashboard < /Link> <
+        /nav> <
+        Routes >
+        <
+        Route path = "/"
+        element = { < h1 > Welcome to Web Thanh Toán < /h1>} / >
+            <
+            Route path = "/login"
+            element = { < Login / > }
+            /> <
+            Route path = "/register"
+            element = { < Register / > }
+            /> <
+            Route path = "/dashboard"
+            element = { < Dashboard / > }
+            /> <
+            /Routes> <
+            /div> <
+            /Router>
+        );
+    }
 
-export default App;
+    export default App;
